@@ -5,9 +5,25 @@ This repository contains the PyTorch implementation of EGGCN, along with scripts
 ![Framework of EGGCN](./imgs/overview.png)
 
 <center>
-    Framework: EGGCN is a novel model for skeleton-based action recognition, which achieves comparable performance on several large-scale datasets. The model uses a group spatial-temporal graph convolution to extract hierarchical features from the input skeleton sequences, and leverages efficient design choices to reduce the computational cost and memory footprint of the model.
+Framework overview of our proposed method: EGGCN is a novel model for skeleton-based action recognition, which achieves comparable performance on several large-scale datasets. The model uses a group spatial-temporal graph convolution to extract hierarchical features from the input skeleton sequences, and leverages efficient design choices to reduce the computational cost and memory footprint of the model.
 </center>
+
 # Requirements
+
+The implementation is based on PyTorch, and requires Python 3.7 or later. The following packages are required:
+
+- PyTorch 1.9.0 or later
+- CUDA 11.1 or later
+- NumPy
+- ...
+
+To install the dependencies, run:
+
+```bash
+pip install -r requirements.txt
+```
+
+# Usage
 
 
 
