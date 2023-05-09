@@ -1,0 +1,13 @@
+seaborn==0.11.0
+tqdm==4.54.1
+numpy==1.13.3
+matplotlib==2.1.1
+apex==0.9.10dev
+prettytable==3.7.0
+pynvml==11.5.0
+PyYAML==6.0
+thop==0.1.1.post2209072238
+torch==2.0.1
+torchsummary==1.5.1
+vis==0.0.5
+
