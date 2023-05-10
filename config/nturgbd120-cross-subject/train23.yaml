@@ -1,0 +1,46 @@
+work_dir: ./work_dir/ntu120/xsub/eggcn_1-7_7_0-gcn_8
+continue_train: True
+
+# feeder
+feeder: feeders.feeder_ntu23.Feeder
+train_feeder_args:
+  data_path: /home/zkl/Documents/Data/nturgb+d/ntu120/NTU120_CSub.npz
+  split: train
+  debug: False
+  window_size: 64
+  random_rot: True
+  p_interval: [0.5, 1]
+  vel: False
+  bone: False
+  multi_input: False
+
+test_feeder_args:
+  data_path: /home/zkl/Documents/Data/nturgb+d/ntu120/NTU120_CSub.npz
+  split: test
+  window_size: 64
+  p_interval: [0.95]
+  debug: False
+
+# model
+model: model.eggcn23.Model
+model_args:
+  num_class: 120
+  num_point: 25
+  num_person: 2
+  num_gcn_scales: 8
+  num_groups: [7, 7, 0]
+  groups: 2
+  graph: graph.ntu_rgb_d.AdjMatrixGraph
+
+# optim
+weight_decay: 0.0005
+base_lr: 0.1
+step: [30, 50]
+
+# training
+num_epoch: 70
+device: [0, 1, 3]
+batch_size: 172
+forward_batch_size: 172
+test_batch_size: 172
+nesterov: True

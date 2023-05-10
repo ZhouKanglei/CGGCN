@@ -13,7 +13,8 @@ Framework overview of our proposed method: EGGCN is a novel model for skeleton-b
 - Python >= 3.6
 - PyTorch >= 1.1.0
 - PyYAML, tqdm, tensorboardX
-- We provide the [dependency file](./requirements.txt) of our experimental environment, one can install all dependencies by creating a new anaconda virtual environment and running `pip install -r requirements.txt`
+
+We provide the [dependency file](./requirements.txt) of our experimental environment, one can install all dependencies by creating a new anaconda virtual environment and running `pip install -r requirements.txt`
 
 ## Data Preparation
 
@@ -96,7 +97,10 @@ python3 kinetics_gendata.py
 
 ```bash
 # Example: training EGGCN on NTU RGB+D 60 cross subject
-python main.py --config ./config/nturgbd-cross-subject/train.ymal
+python main.py \
+    --config ./config/nturgbd-cross-subject/train.ymal \
+    --phase test --bone False --vel False --multi_input True \
+    --device 0 1 2 3
 ```
 
 ## Testing
@@ -105,12 +109,16 @@ python main.py --config ./config/nturgbd-cross-subject/train.ymal
 
 ```bash
 # Example: training EGGCN on NTU RGB+D 60 cross subject
-python main.py --config ./config/nturgbd-cross-subject/test.ymal
+python main.py \ 
+    --config config/nturgbd-cross-subject/test23.yaml \ 
+    --phase test --bone False --vel False --multi_input True \
+    --device 0 1 2 3 --test_batch_size 64 \ 
+    --weights ./pre_trained/ntu/xsub/joint/weights-67-15611.pt
 ```
 
-### Pretrained Models
+### Pre-trained Models
 
-We provide the pretrained model at `./work_dir/ntu/xsub`.
+We provide the pre-trained model at `./pre_trained/ntu/xsub/joint/weights-67-15611.pt`.
 
 ## Acknowledgements
 
