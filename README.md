@@ -99,7 +99,7 @@ python3 kinetics_gendata.py
 # Example: training EGGCN on NTU RGB+D 60 cross subject
 python main.py \
     --config ./config/nturgbd-cross-subject/train.ymal \
-    --phase test --bone False --vel False --multi_input True \
+    --bone False --vel False --multi_input True \
     --device 0 1 2 3
 ```
 
