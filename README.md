@@ -111,9 +111,9 @@ python main.py \
 # Example: training EGGCN on NTU RGB+D 60 cross subject
 python main.py \ 
     --config config/nturgbd-cross-subject/test23.yaml \ 
-    --phase test --bone False --vel False --multi_input True \
+    --phase test --bone False --vel False --multi_input False \
     --device 0 1 2 3 --test_batch_size 64 \ 
-    --weights ./pre_trained/ntu/xsub/joint/weights-67-15611.pt
+    --weights ./pre_trained/ntu/xsub/joint/weights-54-16902.pt
 ```
 
 ### Pre-trained Models
