@@ -1,6 +1,5 @@
 # Complementary Group Graph Convolutional Network for Skeleton-Based Action Recognition
-This repo is the official implementation for *Complementary Group Graph Convolutional
-Network (CGGCN) for Skeleton-Based Action Recognition*. 
+This repo is the official implementation for *Complementary Group Graph Convolutional Network (CGGCN) for Skeleton-Based Action Recognition*. 
 
 ![Framework of EGGCN](./imgs/overview.png)
 
@@ -25,7 +24,7 @@ We provide the [dependency file](./requirements.txt) of our experimental environ
 
 There are 3 datasets to download:
 
-- Kinetics Skelton 400
+- Kinetics Skeleton 400
 - NTU RGB+D 60 Skeleton
 - NTU RGB+D 120 Skeleton
 
@@ -97,7 +96,7 @@ python3 kinetics_gendata.py
 - Change the config file depending on what you want.
 
 ```bash
-# Example: training EGGCN on NTU RGB+D 60 cross subject
+# Example: training CGGCN on NTU RGB+D 60 cross subject
 python main.py \
     --config ./config/nturgbd-cross-subject/train.ymal \
     --bone False --vel False --multi_input True \
@@ -109,7 +108,7 @@ python main.py \
 - Change the config file depending on what you want.
 
 ```bash
-# Example: training EGGCN on NTU RGB+D 60 cross subject
+# Example: testing pre-trained CGGCN on NTU RGB+D 60 cross subject
 python main.py \ 
     --config config/nturgbd-cross-subject/test23.yaml \ 
     --phase test --bone False --vel False --multi_input False \
