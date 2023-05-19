@@ -1,6 +1,4 @@
-# Complementary Group Graph Convolutional
-Network for Skeleton-Based Action Recognition
-
+# Complementary Group Graph Convolutional Network for Skeleton-Based Action Recognition
 This repo is the official implementation for *Complementary Group Graph Convolutional
 Network (CGGCN) for Skeleton-Based Action Recognition*. 
 
