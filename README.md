@@ -1,12 +1,15 @@
-# EGGCN: Efficient Group Graph Convolutional Network for Skeleton-Based Action Recognition
+# Complementary Group Graph Convolutional
+Network for Skeleton-Based Action Recognition
 
-This repo is the official implementation for *EGGCN: Efficient Group Graph Convolutional Network for Skeleton-Based Action Recognition*. 
+This repo is the official implementation for *Complementary Group Graph Convolutional
+Network (CGGCN) for Skeleton-Based Action Recognition*. 
 
 ![Framework of EGGCN](./imgs/overview.png)
 
 <center>
-Framework overview of our proposed method: EGGCN is a novel model for skeleton-based action recognition, which achieves comparable performance on several large-scale datasets. The model uses a group spatial-temporal graph convolution to extract hierarchical features from the input skeleton sequences, and leverages efficient design choices to reduce the computational cost and memory footprint of the model.
+Framework overview of our proposed method: Our core insight is to exploit the complementarity of inherent multi-modal information of human actions at intra-branch and inter-branch levels. 
 </center>
+
 
 ## Prerequisites
 
