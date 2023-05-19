@@ -568,11 +568,11 @@ if __name__ == '__main__':
         num_point=25,
         num_person=2,
         num_gcn_scales=8,
-        num_groups=(7, 7, 7),
+        num_groups=(7, 7, 0),
         graph='graph.ntu_rgb_d.AdjMatrixGraph'
     )
 
-    N, C, T, V, M = 6, 3, 64, 25, 2
+    N, C, T, V, M = 1, 3, 64, 25, 2
     x = torch.randn(N, 2, C, T, V, M)
     model.forward(x)
 
