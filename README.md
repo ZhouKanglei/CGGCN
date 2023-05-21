@@ -111,7 +111,7 @@ python main.py \
 # Example: testing pre-trained CGGCN on NTU RGB+D 60 cross subject
 python main.py \ 
     --config config/nturgbd-cross-subject/test23.yaml \ 
-    --phase test --bone False --vel False --multi_input False \
+    --phase test --bone False --vel False --multi_input True \
     --device 0 1 2 3 --test_batch_size 64 \ 
     --weights ./pre_trained/ntu/xsub/joint/weights-54-16902.pt
 ```
